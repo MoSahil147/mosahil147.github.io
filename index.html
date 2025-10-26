@@ -8,7 +8,7 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=League+Spartan:400,700|Open+Sans:400,600" rel="stylesheet" />
 
-  <!-- Site icon (shows in tab/header and when searching) -->
+  <!-- Site icon -->
   <link rel="icon" href="LSM.png" type="image/jpeg" />
   <link rel="apple-touch-icon" href="LSM.png" />
   <meta property="og:image" content="LSM.png" />
@@ -16,10 +16,6 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Smooth-scroll polyfill -->
-  <script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
-  <script>smoothscroll.polyfill();</script>
 </head>
 
 <body>
@@ -31,7 +27,7 @@
       <a href="#experience">EXPERIENCE</a>
       <a href="#education">EDUCATION</a>
       <a href="#skills">SKILLS</a>
-      <a href="#certifications">CERTIFICATION</a>
+      <a href="#certifications">CERTIFICATIONS</a>
       <a href="#hobbies">HOBBIES</a>
       <a href="#contact">CONTACT</a>
     </div>
@@ -63,10 +59,10 @@
       <div class="about-content">
         <p>
           <span class="highlight">HEY</span>,
-          <span class="white-text">I’M SAHIL MOHAPATRA</span>,
+          <span class="white-text">I AM SAHIL MOHAPATRA</span>,<br/>
           A COMPUTER SCIENCE UNDERGRADUATE AT
           <span class="highlight">BITS PILANI, DUBAI CAMPUS</span>.
-          HERE, YOU CAN EXPLORE THE PROJECTS I’VE WORKED ON.
+          HERE, YOU CAN EXPLORE THE PROJECTS I HAVE WORKED ON.
         </p>
       </div>
     </div>
@@ -100,7 +96,7 @@
         </div>
       </div>
 
-      <div class="project-card" onclick="window.open('https://wellnessai.netlify.app/','_blank')">
+      <div id="proj-wellnessai" class="project-card" onclick="window.open('https://wellnessai.netlify.app/','_blank')">
         <img src="chat1.jpg" alt="WellnessAI" />
         <div class="project-info">
           <h2>WellnessAI</h2>
@@ -125,20 +121,23 @@
       <div class="experience-item">
         <h2 class="experience-title">BACKEND AI/ML INTERN</h2>
         <p class="experience-subtitle">ODEX GLOBAL TECHNOLOGIES, DUBAI</p>
-        <p class="experience-date">AUGUST 2025 – JANUARY 2026</p>
+        <p class="experience-date">AUGUST 2025 – PRESENT</p>
         <ul class="experience-details">
-          <li><span class="bold-text">Building a document-parsing system</span> for <span class="bold-text">Bills of Lading</span>; <span class="bold-text">integrated OCR</span> and <span class="bold-text">fine-tuned ML models</span> to automate high-accuracy field extraction.</li>
+         <li>Developed an AI-driven pipeline using OpenCV, Tesseract OCR, and Groq models to convert shipping documents into structured JSON with ~97% accuracy.</li>
+            <li>Automated text extraction, bounding-box detection, and field mapping via modular Python scripts for scalable multi-page PDFs.</li>
         </ul>
       </div>
 
       <div class="experience-item">
-        <h2 class="experience-title">FRONT-END DEVELOPMENT INTERN</h2>
-        <p class="experience-subtitle">SKOLAR EDTECH, BANGALORE (REMOTE)</p>
+        <h2 class="experience-title">FULL-STACK WEB DEVELOPMENT INTERN</h2>
+        <p class="experience-subtitle">SKOLAR EDTECH, BANGALORE (REMOTE) — CERTIFICATE</p>
         <p class="experience-date">JUNE 2024 – AUGUST 2024</p>
         <ul class="experience-details">
-          <li>Built responsive photography & music-streaming sites.</li>
-          <li>Enhanced UX with intuitive navigation & animations.</li>
-          <li>Delivered features on tight Agile sprints.</li>
+          <li>Developed reusable HTML/CSS UI components that streamlined page assembly and improved iteration speed by 20%; collaborated in agile sprints under senior mentorship.</li>
+          <li>Built and showcased two UIs:
+            <a class="inline-link" href="https://mosahil147.github.io/Photography-Web/" target="_blank" rel="noopener">Photography Portfolio</a> and
+            <a class="inline-link" href="https://mosahil147.github.io/Online-Web-Music-Streaming-Platform/" target="_blank" rel="noopener">Online Music-Streaming UI</a>.
+          </li>
         </ul>
       </div>
     </div>
@@ -149,14 +148,14 @@
     <h1 class="section-title">EDUCATION</h1>
     <div class="education-container">
       <div class="education-item">
-        <h2 class="education-title">BITS PILANI – DUBAI CAMPUS</h2>
-        <p class="education-subtitle">B.E. Computer Science</p>
-        <p class="education-date">2022 – Present</p>
+        <h2 class="education-title">BITS PILANI, DUBAI CAMPUS</h2>
+        <p class="education-subtitle">B.Tech in Computer Science</p>
+        <p class="education-date">Batch 2026</p>
       </div>
       <div class="education-item">
         <h2 class="education-title">DAV PUBLIC SCHOOL, NAVI MUMBAI</h2>
-        <p class="education-subtitle">Pre-Primary → Sr. Secondary</p>
-        <p class="education-date">2008 – 2022</p>
+        <p class="education-subtitle">Secondary and Higher Secondary</p>
+        <p class="education-date">Batch 2022</p>
       </div>
     </div>
   </section>
@@ -172,14 +171,34 @@
     </div>
   </section>
 
-  <!-- Certification -->
+  <!-- Certifications -->
   <section id="certifications" class="certifications">
-    <h1 class="section-title">CERTIFICATION</h1>
+    <h1 class="section-title">CERTIFICATIONS</h1>
     <div class="kv">
-      <p class="kv-line"><a class="kv-key kv-link" href="#">1st Place – ACM Hackathon 2022:</a> <span class="kv-val">Built an AI-powered text-to-video generation tool.</span></p>
-      <p class="kv-line"><a class="kv-key kv-link" href="#">Certified in Generative AI:</a> <span class="kv-val"> Hands-on training in LangChain & HuggingFace.</span></p>
-      <p class="kv-line"><a class="kv-key kv-link" href="#">Certified in Artificial Intelligence:</a> <span class="kv-val">Completed practical ML/AI training.</span></p>
-      <p class="kv-line"><a class="kv-key kv-link" href="#">4th Place – ACMW Hackathon 2025:</a> <span class="kv-val">Built WellnessAI chatbot for mental health.</span></p>
+      <ul class="cert-list">
+        <li>
+          <a class="kv-link" href="https://drive.google.com/file/d/1OitGpgxKXm4qlPYAd98g4haHA3x6K9o8/view" target="_blank" rel="noopener">
+            1st Place – ACM Hackathon 2022
+          </a>:
+          Built an AI-powered text-to-video generation tool.
+        </li>
+        <li>
+          <a class="kv-link" href="https://drive.google.com/file/d/18axOEu29u2TOBjNYgPMiss4hwiOG7tv4/view" target="_blank" rel="noopener">
+            Complete Generative AI Course With LangChain and Huggingface — Udemy
+          </a>
+        </li>
+        <li>
+          <a class="kv-link" href="https://drive.google.com/file/d/1yRiUDSk_JBCkNAqEY0kGm3yCSOnMllxT/view" target="_blank" rel="noopener">
+            Artificial Intelligence A–Z 2025 — Udemy
+          </a>
+        </li>
+        <li>
+          <a class="kv-link" href="https://drive.google.com/file/d/1qP6joTJgk7UWxTdQ8jVUQBwCYTT5eBFf/view?usp=sharing" target="_blank" rel="noopener">
+            4th Place – ACMW Hackathon 2025
+          </a>:
+          Built <a class="kv-link" href="#proj-wellnessai" data-scroll-to="#proj-wellnessai">WellnessAI</a> chatbot for mental health.
+        </li>
+      </ul>
     </div>
   </section>
 
@@ -198,30 +217,18 @@
   <!-- Contact -->
   <section id="contact" class="contact">
     <h1 class="section-title">CONTACT</h1>
-    <p class="cv-inline"><a class="cv-anchor" href="https://drive.google.com/file/d/1g7N-0_2LSUhVS_v5T94ZgGESjDY4JcrT/view?usp=share_link" target="_blank">Explore my CV here</a></p>
+    <p class="cv-inline">
+      <a class="cv-anchor" href="https://drive.google.com/drive/folders/1eeDglXHbI-qYSOw6hieZSQzLNl7B2PWM?usp=share_link" target="_blank" rel="noopener">
+        Explore my CV here
+      </a>
+    </p>
     <div class="contact-icons">
-      <a href="https://www.linkedin.com/in/sahil-mohapatra-1a8157248/" target="_blank"><img class="icon" src="link.png" alt="LinkedIn" /></a>
+      <a href="https://www.linkedin.com/in/sahil-mohapatra-1a8157248/" target="_blank" rel="noopener"><img class="icon" src="link.png" alt="LinkedIn" /></a>
       <a href="mailto:sahilxmohapatra@gmail.com"><img class="icon" src="mail.png" alt="Email" /></a>
-      <a href="https://github.com/MoSahil147" target="_blank"><img class="icon" src="git.png" alt="GitHub" /></a>
-      <a href="https://www.instagram.com/mosahil.14/" target="_blank"><img class="icon" src="insta.png" alt="Instagram" /></a>
+      <a href="https://github.com/MoSahil147" target="_blank" rel="noopener"><img class="icon" src="git.png" alt="GitHub" /></a>
+      <a href="https://www.instagram.com/mosahil.14/" target="_blank" rel="noopener"><img class="icon" src="insta.png" alt="Instagram" /></a>
     </div>
   </section>
-
-  <!-- Background audio -->
-  <audio id="bgAudio" preload="auto" muted>
-    <source src="The Weeknd Is There Someone Else Instrumental.mp4" type="audio/mp4" />
-  </audio>
-
-  <!-- Mute/Unmute button -->
-  <button id="audioToggle" class="audio-toggle" aria-label="Toggle sound">
-    <svg class="icon-speaker" viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M3 10v4h4l5 4V6L7 10H3zM16 7c1.657 0 3 2.239 3 5s-1.343 5-3 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M19 4c2.6 1.6 4 4.3 4 8s-1.4 6.4-4 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/>
-    </svg>
-    <svg class="icon-slash" viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M3 21L21 3" fill="none" stroke="#ff3b30" stroke-width="3" stroke-linecap="round"/>
-    </svg>
-  </button>
 
   <!-- Custom cursor -->
   <div class="cursor" id="cursor"></div>

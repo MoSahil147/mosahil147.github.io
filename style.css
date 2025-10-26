@@ -12,6 +12,16 @@ body{
   cursor:none;
 }
 
+/* Typography consistency */
+h1,h2,.section-title,.experience-title,.education-title,.hobby-title{
+  font-family:'League Spartan',sans-serif;
+  font-weight:800;
+  letter-spacing:.2px;
+}
+p, li, .kv-line, .project-card p, .education-subtitle, .experience-subtitle, .experience-date{
+  font-family:'Open Sans',sans-serif;
+}
+
 /* ---------- Navigation ---------- */
 nav{
   background:#000;
@@ -35,6 +45,7 @@ nav a:hover{color:#fff;transform:translateY(-1px)}
 /* ---------- Footer ---------- */
 footer{text-align:center;padding:1.25rem 0;font-weight:bold}
 footer h1{font-size:2rem;color:#FFD700;letter-spacing:.5px}
+footer .white-text-inline{color:#fff}
 footer p{font-size:1.2rem;margin-top:.5rem;color:#FFD700;opacity:.9}
 
 /* ---------- Section base ---------- */
@@ -46,12 +57,13 @@ section{width:100%}
 
 /* ---------- About ---------- */
 .about-me{background:#000;color:#FFD700;padding:4rem 2rem;text-align:center}
-.about-me h1{margin-bottom:1.25rem;} /* add space below ABOUT ME */
+.about-me h1{margin-bottom:1.25rem;}
 .about-container{display:flex;flex-direction:column;align-items:center;gap:2rem;max-width:90%;margin:0 auto}
 .image-container{width:250px;height:250px;border-radius:50%;overflow:hidden;border:4px solid #FFD700;box-shadow:0 0 24px rgba(255,215,0,.2)}
 .image-container img{width:100%;height:100%;object-fit:cover}
 .about-content p{max-width:900px;margin:0 auto;font:1.2rem/1.7 'Open Sans',sans-serif}
-.highlight,.white-text{color:#FFD700;font-weight:800}
+.highlight{color:#FFD700;font-weight:800}
+.white-text{color:#fff;font-weight:800}
 
 /* ---------- Projects ---------- */
 .projects{background:#000;color:#FFD700;padding:4rem 2rem}
@@ -66,43 +78,72 @@ section{width:100%}
 }
 .project-card img{width:100%;height:230px;object-fit:cover;filter:grayscale(.1)}
 .project-info{flex-grow:1;display:flex;flex-direction:column;justify-content:center;padding:.75rem 1rem;text-align:center}
-.project-card h2{font:700 1.25rem 'Public Sans',sans-serif;margin-bottom:.35rem}
-.project-card p{font:.97rem 'Open Sans',sans-serif;opacity:.95}
+.project-card h2{font:700 1.25rem 'League Spartan',sans-serif;margin-bottom:.35rem}
+
+/* ↓ Reduced description font size */
+.project-card p{font:600 1rem/1.7 'Open Sans',sans-serif;opacity:.95}
+
+/* Bullet list style for ODeX card */
+.project-bullets{
+  text-align:left;
+  margin:0 auto;
+  padding-left:1.2rem;
+  max-width:95%;
+  list-style:disc;
+}
+.project-bullets li{
+  color:#fff;
+  font:600 0.98rem/1.6 'Open Sans',sans-serif;
+  margin:.25rem 0;
+}
+
 .project-card:hover{
   transform:translateY(-6px) scale(1.02);
   box-shadow:0 12px 28px rgba(255,215,0,.18);
   border-color:rgba(255,215,0,.55);
 }
 
+/* Pulse highlight (2 glows) */
+@keyframes pulseGlow {
+  0%   {transform:translateY(0) scale(1);   box-shadow:0 6px 16px rgba(0,0,0,.45);            border-color:rgba(255,215,0,.25);}
+  50%  {transform:translateY(-6px) scale(1.02); box-shadow:0 12px 28px rgba(255,215,0,.18);  border-color:rgba(255,215,0,.55);}
+  100% {transform:translateY(0) scale(1);   box-shadow:0 6px 16px rgba(0,0,0,.45);            border-color:rgba(255,215,0,.25);}
+}
+.pulse-highlight{animation:pulseGlow 1.2s ease-in-out 2}
+
 /* ---------- Experience ---------- */
 .experience{background:#000;color:#FFD700;padding:4rem 2rem}
 .experience-container{max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:2rem}
-.experience-title{font-size:1.5rem;font-weight:800;margin-bottom:.35rem}
+.experience-title{font-size:1.5rem;margin-bottom:.35rem}
 .experience-subtitle{font-size:1.1rem;font-weight:700;margin-bottom:.25rem;opacity:.9}
 .experience-date{font-size:1rem;font-style:italic;margin-bottom:1rem;opacity:.85}
 .experience-details{list-style:disc;margin-left:2rem}
 .experience-details li{font-size:1.08rem;line-height:1.8;color:#fff;margin-bottom:.7rem}
+.inline-link{color:#FFD700;text-decoration:underline;text-underline-offset:3px}
 .bold-text{font-weight:bold}
 
 /* ---------- Education ---------- */
 .education{background:#000;color:#FFD700;padding:3rem 2rem}
 .education-container{max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:2rem;text-align:left}
-.education-title{font-size:1.5rem;font-weight:800;margin-bottom:.5rem}
+.education-title{font-size:1.5rem;margin-bottom:.5rem}
 .education-subtitle{font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:.4rem}
 .education-date{font-size:1rem;font-style:italic;color:#fff;opacity:.9}
 
-/* ---------- Skills & Certification ---------- */
+/* ---------- Skills & Certifications ---------- */
 .skills,.certifications{background:#000;padding:4rem 2rem}
 .kv{max-width:900px;margin:0 auto}
 .kv-line{font:600 1.1rem/1.8 'Open Sans',sans-serif;margin:.15rem 0}
 .kv-key{font-weight:800;color:#FFD700}
 .kv-val{color:#fff;font-weight:700;font-family:'League Spartan',sans-serif}
 .kv-link{color:#FFD700;text-decoration:underline;text-underline-offset:3px}
+.cert-list{list-style:disc;margin-left:2rem;display:flex;flex-direction:column;gap:.8rem}
+.cert-list li{color:#fff;font:600 1.05rem/1.8 'Open Sans',sans-serif}
 
 /* ---------- Hobbies ---------- */
 .hobbies{background:#000;color:#fff;padding:4rem 2rem;text-align:left}
 .hobbies-container{max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:1.25rem}
-.hobby-title{font-size:1.35rem;font-weight:800;color:#FFD700;margin-bottom:.25rem}
+.hobby-title{font-size:1.35rem;color:#FFD700;margin-bottom:.25rem}
+.hobbies-container p{font:600 1.15rem/1.9 'Open Sans',sans-serif}
 
 /* ---------- Contact ---------- */
 .contact{background:#000;color:#FFD700;padding:4rem 2rem;text-align:center}
@@ -124,33 +165,18 @@ section{width:100%}
 }
 @media(hover:none) and (pointer:coarse){.cursor{display:none}}
 
-/* ---------- Audio toggle ---------- */
-.audio-toggle{
-  position:fixed;right:16px;bottom:16px;z-index:1100;
-  width:52px;height:52px;border-radius:50%;
-  display:grid;place-items:center;
-  background:rgba(0,0,0,.6);
-  border:1px solid rgba(255,215,0,.4);
-  color:#FFD700;cursor:pointer;
-  box-shadow:0 6px 16px rgba(0,0,0,.5);
-  transition:transform .15s,box-shadow .2s,border-color .2s;
-}
-.audio-toggle:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.6);border-color:rgba(255,215,0,.8)}
-.icon-speaker{width:28px;height:28px}
-.icon-slash{
-  position:absolute;width:34px;height:34px;display:none;pointer-events:none;
-}
-.audio-toggle.muted .icon-slash{display:block}
-
 /* ---------- Responsive ---------- */
 @media(max-width:768px){
   .video-container{height:300px}
   nav a{font-size:1rem}
   .project-card{flex:1 1 100%}
   .project-card img{height:200px}
+  .project-card p{font-size:.95rem;line-height:1.6}
+  .project-bullets li{font-size:.95rem;line-height:1.6}
 }
 @media(max-width:480px){
   .image-container{width:200px;height:200px}
   .about-content p{font-size:1rem}
   .experience-title,.education-title,.hobby-title{font-size:1.15rem}
+  .hobbies-container p{font-size:1.1rem}
 }
