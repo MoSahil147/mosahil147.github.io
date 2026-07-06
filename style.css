@@ -121,6 +121,10 @@ section {
   text-align: center;
 }
 
+.about-me h1 {
+  margin-bottom: 2.5rem;
+}
+
 .about-container {
   display: flex;
   flex-direction: column;
