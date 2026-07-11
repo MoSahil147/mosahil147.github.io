@@ -1,0 +1,4 @@
+.DS_Store
+
+# Unused assets (not referenced in index.html, css/style.css, or js/script.js)
+assets/unused/
