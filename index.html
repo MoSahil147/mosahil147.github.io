@@ -6,12 +6,14 @@
   <title>Sahil Mohapatra – Portfolio</title>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=League+Spartan:400,700|Open+Sans:400,600" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css?family=League+Spartan:400,700|Open+Sans:400,600&display=swap" rel="stylesheet" />
 
   <!-- Site icon -->
   <link rel="icon" href="assets/images/LSM.png" type="image/jpeg" />
   <link rel="apple-touch-icon" href="assets/images/LSM.png" />
-  <meta property="og:image" content="LSM.png" />
+  <meta property="og:image" content="assets/images/LSM.png" />
   <meta name="theme-color" content="#000000" />
 
   <!-- CSS -->
@@ -51,11 +53,11 @@
   </footer>
 
   <!-- About -->
-  <section id="about" class="about-me">
+  <section id="about" class="about-me reveal">
     <h1>ABOUT ME</h1>
     <div class="about-container">
       <div class="image-container">
-        <img src="assets/images/LSM.png" alt="Sahil Mohapatra" />
+        <img src="assets/images/Sahil.png" alt="Sahil Mohapatra" />
       </div>
       <div class="about-content">
         <p>
@@ -70,13 +72,13 @@
   </section>
 
   <!-- Projects (UPDATED ONLY HERE) -->
-  <section id="projects" class="projects">
+  <section id="projects" class="projects reveal">
     <h1 class="section-title">PROJECTS</h1>
 
     <div class="project-container">
 
       <div class="project-card">
-        <img src="assets/images/Photo.png" alt="GitFlix" />
+        <img src="assets/images/Photo.png" alt="GitFlix" loading="lazy" decoding="async" />
         <div class="project-info">
           <h2>GitFlix</h2>
           <p>Turns any public GitHub repo into a cinematic documentary with animated scenes, commit analytics, a generated narrative and a full soundtrack.</p>
@@ -89,7 +91,7 @@
       </div>
 
       <div class="project-card">
-        <img src="assets/images/Scuba.jpeg" alt="Scuba-Doo" />
+        <img src="assets/images/Scuba.jpeg" alt="Scuba-Doo" loading="lazy" decoding="async" />
         <div class="project-info">
           <h2>Scuba-Doo</h2>
           <p>Dive safety prediction using ML, weather, marine and live APIs.</p>
@@ -102,7 +104,7 @@
       </div>
 
       <div class="project-card">
-        <img src="assets/images/DeepFake.webp" alt="Social Media Content Analysis" />
+        <img src="assets/images/DeepFake.webp" alt="Social Media Content Analysis" loading="lazy" decoding="async" />
         <div class="project-info">
           <h2>Social Media Content Analysis</h2>
           <p>Developing a multi-agent AI system that analyses uploaded videos to detect AI-generated or manipulated content and estimate potential virality.</p>
@@ -114,7 +116,7 @@
       </div>
 
       <div id="proj-wellnessai" class="project-card">
-        <img src="assets/images/chat1.jpg" alt="Healthcare AI Assistant using RAG LLMs" />
+        <img src="assets/images/chat1.jpg" alt="Healthcare AI Assistant using RAG LLMs" loading="lazy" decoding="async" />
         <div class="project-info">
           <h2>Healthcare AI Assistant using RAG LLMs</h2>
           <p>RAG-based healthcare assistant with agentic appointment routing and query rewriting.</p>
@@ -126,7 +128,7 @@
       </div>
 
       <div class="project-card">
-        <img src="assets/images/FineTune.jpeg" alt="LLM Fine Tuning" />
+        <img src="assets/images/FineTune.jpeg" alt="LLM Fine Tuning" loading="lazy" decoding="async" />
         <div class="project-info">
           <h2>LLM Fine-Tuning with LoRA</h2>
           <p>LoRA fine-tuning of Falcon-RW-1B using PEFT and TRL.</p>
@@ -138,7 +140,7 @@
       </div>
 
       <div class="project-card">
-        <img src="assets/images/pic1.jpg" alt="Predictive Analysis" />
+        <img src="assets/images/pic1.jpg" alt="Predictive Analysis" loading="lazy" decoding="async" />
         <div class="project-info">
           <h2>Predictive Analysis of Social Media</h2>
           <p>ML-driven dashboard for virality prediction, influencer identification, and misinformation spread analysis.</p>
@@ -151,7 +153,7 @@
       </div>
 
       <div class="project-card">
-        <img src="assets/images/pic4.jpg" alt="Music Platform" />
+        <img src="assets/images/pic4.jpg" alt="Music Platform" loading="lazy" decoding="async" />
         <div class="project-info">
           <h2>Music Streaming Platform UI</h2>
           <p>Responsive Spotify style frontend UI.</p>
@@ -166,7 +168,7 @@
   </section>
 
   <!-- Experience -->
-  <section id="experience" class="experience">
+  <section id="experience" class="experience reveal">
   <h1 class="section-title">EXPERIENCE</h1>
   <div class="experience-container">
 
@@ -232,7 +234,7 @@ strengthened the company’s project portfolio.
 </section>
 
   <!-- Education -->
-  <section id="education" class="education">
+  <section id="education" class="education reveal">
     <h1 class="section-title">EDUCATION</h1>
     <div class="education-container">
       <div class="education-item">
@@ -249,19 +251,21 @@ strengthened the company’s project portfolio.
   </section>
 
   <!-- Skills -->
-  <section id="skills" class="skills">
+  <section id="skills" class="skills reveal">
     <h1 class="section-title">SKILLS</h1>
     <div class="kv">
-      <p class="kv-line"><span class="kv-key">Languages:</span> <span class="kv-val">Python, Java, HTML, CSS, JavaScript, SQL</span></p>
-      <p class="kv-line"><span class="kv-key">Frameworks/Tools:</span> <span class="kv-val">Git, GitHub, GitHub Actions, BitBucket, uv, Docker, LangChain, HuggingFace, Ollama,
-      FastAPI, Streamlit, Scikit-Learn, TensorFlow, PyTorch, FAISS, ChromaDB, Kafka</span></p>
-      <p class="kv-line"><span class="kv-key">Expertise:</span> <span class="kv-val">RAG pipelines, model training, feature engineering, API development</span></p>
-      <p class="kv-line"><span class="kv-key">Soft Skills:</span> <span class="kv-val">Team collaboration, communication, critical thinking</span></p>
+      <p class="kv-line"><span class="kv-key">Languages:</span> <span class="kv-val">Python, Java, SQL, JavaScript, HTML, CSS</span></p>
+      <p class="kv-line"><span class="kv-key">Frameworks/Tools:</span> <span class="kv-val">Git, GitHub, uv, Docker, FastAPI, Streamlit, LangChain, LangGraph, Hugging Face, Ollama,
+      PyTorch, TensorFlow, Scikit-Learn, LightGBM, Kafka, MediaPipe, ReAct Agents, MCP Servers</span></p>
+      <p class="kv-line"><span class="kv-key">Cloud, Deployment &amp; Databases:</span> <span class="kv-val">AWS S3, Render, Netlify, Supabase, SQL Databases, Vector Databases,
+      FAISS, ChromaDB, REST APIs, JSON Schema Validation, Server-Sent Events (SSE)</span></p>
+      <p class="kv-line"><span class="kv-key">AI/ML Areas:</span> <span class="kv-val">Machine Learning, Deep Learning, LLM Fine-Tuning, RAG, Agentic AI, OCR Pipelines, CNN</span></p>
+      <p class="kv-line"><span class="kv-key">Core Concepts:</span> <span class="kv-val">Data Structures and Algorithms, RDBMS Concepts, API Design</span></p>
     </div>
   </section>
 
   <!-- Certifications -->
-  <section id="certifications" class="certifications">
+  <section id="certifications" class="certifications reveal">
     <h1 class="section-title">CERTIFICATIONS</h1>
     <div class="kv">
       <ul class="cert-list">
@@ -269,13 +273,13 @@ strengthened the company’s project portfolio.
           <a class="kv-link" href="https://drive.google.com/file/d/1OitGpgxKXm4qlPYAd98g4haHA3x6K9o8/view" target="_blank">1st Place – ACM Hackathon 2022</a>
         </li>
         <li>
-          <a class="kv-link" href="https://drive.google.com/file/d/18axOEu29u2TOBjNYgPMiss4hwiOG7tv4/view" target="_blank">Complete Generative AI Course With LangChain and Huggingface — Udemy</a>
+          <a class="kv-link" href="https://drive.google.com/file/d/18axOEu29u2TOBjNYgPMiss4hwiOG7tv4/view" target="_blank">Complete Generative AI Course With LangChain and Huggingface (Udemy)</a>
         </li>
         <li>
-          <a class="kv-link" href="https://drive.google.com/file/d/1yRiUDSk_JBCkNAqEY0kGm3yCSOnMllxT/view" target="_blank">Complete Agentic AI Bootcamp With LangGraph and LangChain — Udemy</a>
+          <a class="kv-link" href="https://drive.google.com/file/d/1yRiUDSk_JBCkNAqEY0kGm3yCSOnMllxT/view" target="_blank">Complete Agentic AI Bootcamp With LangGraph and LangChain (Udemy)</a>
         </li>
         <li>
-          <a class="kv-link" href="https://drive.google.com/file/d/1yRiUDSk_JBCkNAqEY0kGm3yCSOnMllxT/view" target="_blank">Artificial Intelligence A–Z 2025 — Udemy</a>
+          <a class="kv-link" href="https://drive.google.com/file/d/1yRiUDSk_JBCkNAqEY0kGm3yCSOnMllxT/view" target="_blank">Artificial Intelligence A to Z 2025 (Udemy)</a>
         </li>
         <li>
           <a class="kv-link" href="https://drive.google.com/file/d/1qP6joTJgk7UWxTdQ8jVUQBwCYTT5eBFf/view" target="_blank">Top 5 – ACMW Hackathon 2025</a>
@@ -285,19 +289,20 @@ strengthened the company’s project portfolio.
   </section>
 
   <!-- Hobbies -->
-  <section id="hobbies" class="hobbies">
+  <section id="hobbies" class="hobbies reveal">
     <h1 class="section-title">HOBBIES</h1>
     <div class="hobbies-container">
-      <div class="hobby-item"><h2>PHOTOGRAPHY</h2><p>Capturing stories through unique perspectives.</p></div>
+      <div class="hobby-item"><h2>SCUBA DIVING</h2><p>Open Water Diver certified, exploring life beneath the surface.</p></div>
+      <div class="hobby-item"><h2>PHOTOGRAPHY AND VIDEOGRAPHY</h2><p>Capturing stories through unique perspectives.</p></div>
       <div class="hobby-item"><h2>PIANO</h2><p>Exploring melodies and enhancing focus.</p></div>
       <div class="hobby-item"><h2>FITNESS</h2><p>Regular workouts for physical and mental strength.</p></div>
-      <div class="hobby-item"><h2>TECH ENTHUSIAST</h2><p>Experimenting with emerging tools and frameworks.</p></div>
+      <div class="hobby-item"><h2>TECH ENTHUSIAST</h2><p>I love doing creative things, you might have seen it in the <a href="#projects" class="inline-link">Projects</a> section, and I keep doing so, follow my <a href="https://github.com/MoSahil147" target="_blank" class="inline-link">GitHub</a> to know!</p></div>
       <div class="hobby-item"><h2>TRAVEL</h2><p>Discovering cultures and broadening perspectives.</p></div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="contact">
+  <section id="contact" class="contact reveal">
     <h1 class="section-title">CONTACT</h1>
 <div class="contact-icons">
       <a href="https://www.linkedin.com/in/sahil-mohapatra-1a8157248/" target="_blank"><img class="icon" src="assets/images/link.png" alt="LinkedIn" /></a>
