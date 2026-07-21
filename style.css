@@ -23,8 +23,7 @@ h1,
 h2,
 .section-title,
 .experience-title,
-.education-title,
-.hobby-title {
+.education-title {
   font-family: 'League Spartan', sans-serif;
   font-weight: 800;
   letter-spacing: 0.2px;
