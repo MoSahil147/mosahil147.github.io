@@ -91,7 +91,7 @@ nav a:hover::after {
 /* ---------- Hero video ---------- */
 .video-container {
   width: 100%;
-  height: 500px;
+  height: clamp(220px, 45vw, 500px);
   overflow: hidden;
 }
 
@@ -108,16 +108,18 @@ footer {
 }
 
 footer h1 {
-  font-size: 2rem;
+  font-size: clamp(1.4rem, 5vw, 2rem);
   color: #FFD700;
   letter-spacing: 0.5px;
+  padding: 0 1rem;
 }
 
 footer p {
-  font-size: 1.2rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.2rem);
   margin-top: 0.5rem;
   opacity: 0.9;
   color: #ffffff;
+  padding: 0 1rem;
 }
 
 /* ---------- Section base ---------- */
@@ -126,10 +128,11 @@ section {
 }
 
 .section-title {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   margin-bottom: 2rem;
   text-align: center;
   text-shadow: 0 0 18px rgba(255, 215, 0, 0.12);
+  padding: 0 1rem;
 }
 
 /* ---------- About ---------- */
@@ -169,7 +172,7 @@ section {
 
 .about-content p {
   max-width: 900px;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   line-height: 1.7;
 }
 
@@ -200,12 +203,13 @@ section {
 .project-card {
   flex: 1 1 calc(30% - 2rem);
   max-width: 350px;
-  min-width: 300px;
+  min-width: 280px;
   background: #101010;
   border: 1px solid rgba(255, 215, 0, 0.25);
   border-radius: 12px;
   overflow: hidden;
-  height: 420px;
+  height: auto;
+  min-height: 420px;
   display: flex;
   flex-direction: column;
   transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
@@ -277,29 +281,29 @@ section {
 }
 
 .experience-title {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
 }
 
 .experience-subtitle {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
   font-weight: 700;
   opacity: 0.9;
 }
 
 .experience-date {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-style: italic;
   opacity: 0.85;
 }
 
 .experience-details {
-  margin-left: 2rem;
+  margin-left: 1.25rem;
   list-style: disc;
 }
 
 .experience-details li {
   color: #fff;
-  font-size: 1.05rem;
+  font-size: clamp(0.95rem, 2.2vw, 1.05rem);
   line-height: 1.8;
   margin-bottom: 0.6rem;
 }
@@ -339,7 +343,7 @@ section {
 }
 
 .kv-line {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
   line-height: 1.8;
 }
 
@@ -353,7 +357,7 @@ section {
 }
 
 .cert-list {
-  margin-left: 2rem;
+  margin-left: 1.25rem;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
@@ -361,7 +365,7 @@ section {
 
 .cert-list li {
   color: #fff;
-  font-size: 1.05rem;
+  font-size: clamp(0.95rem, 2.2vw, 1.05rem);
 }
 
 /* ---------- Hobbies ---------- */
@@ -378,7 +382,7 @@ section {
 }
 
 .hobby-title {
-  font-size: 1.35rem;
+  font-size: clamp(1.15rem, 3vw, 1.35rem);
   color: #FFD700;
 }
 
@@ -458,22 +462,73 @@ section {
 }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 768px) {
-  .video-container {
-    height: 300px;
+
+/* Tablets (iPad portrait/landscape and similar) */
+@media (max-width: 1024px) {
+  .project-container {
+    gap: 1.5rem;
   }
   .project-card {
-    flex: 1 1 100%;
+    flex: 1 1 calc(45% - 1.5rem);
+    min-width: 260px;
+  }
+  .nav-container {
+    gap: 0.5rem;
+  }
+  nav a {
+    font-size: 1rem;
+    padding: 0.4rem 0.7rem;
   }
 }
 
+/* Phones (landscape and small tablets) */
+@media (max-width: 768px) {
+  .project-card {
+    flex: 1 1 100%;
+    max-width: 420px;
+  }
+  .about-container,
+  .experience-container,
+  .education-container,
+  .kv,
+  .hobbies-container {
+    max-width: 100%;
+  }
+  .contact-icons {
+    gap: 1.25rem;
+  }
+  .icon {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* Small phones */
 @media (max-width: 480px) {
   .image-container {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
   }
-  .about-content p {
-    font-size: 1rem;
+  nav a {
+    font-size: 0.9rem;
+    padding: 0.35rem 0.5rem;
+  }
+  .about-me,
+  .projects,
+  .experience,
+  .education,
+  .skills,
+  .certifications,
+  .hobbies,
+  .contact {
+    padding: 3rem 1.25rem;
+  }
+  .contact-icons {
+    gap: 1rem;
+  }
+  .icon {
+    width: 42px;
+    height: 42px;
   }
 }
 
