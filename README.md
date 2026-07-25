@@ -2,7 +2,7 @@
 
 Personal portfolio website of **Sahil Mohapatra**, AI Engineer (LLM, RAG, Agentic AI) and Computer Science undergraduate at BITS Pilani, Dubai Campus.
 
-🔗 **Live site:** [mosahil147.github.io](https://mosahil147.github.io)
+ **Live site:** [mosahil147.github.io](https://mosahil147.github.io)
 
 ## About
 
