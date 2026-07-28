@@ -168,6 +168,7 @@ section {
   height: 100%;
   object-fit: cover;
   object-position: 75% 5%;
+  transform: scale(1.08) translate(2%, 4%);
 }
 
 .about-content p {
